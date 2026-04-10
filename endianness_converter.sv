@@ -8,7 +8,7 @@ module endianness_converter(
     output logic [31:0] converted_word
 );
 
-always_ff @(posedge clk) begin
+always @(posedge clk) begin
     //code goes here
     if(endianness_in == endianness_out) begin
         converted_word <= word;
